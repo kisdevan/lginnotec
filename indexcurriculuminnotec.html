@@ -11,12 +11,12 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         :root {
-            --color-bg: #1F1F1F;
+            --color-bg: #262626; /* Dark Charcoal */
             --color-text: #E8E8E8;
-            --color-primary: #FF6B00;
-            --color-secondary: #FFC000;
-            --color-card: #2D2D2D;
-            --color-border: #444444;
+            --color-primary: #E63946; /* Reddish Pink */
+            --color-secondary: #F4A261; /* Sandy Orange */
+            --color-card: #333333;
+            --color-border: #4D4D4D;
         }
         body {
             font-family: 'Noto Sans KR', sans-serif;
@@ -44,7 +44,21 @@
         }
         .card-hover:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px -5px rgba(255, 107, 0, 0.2);
+            box-shadow: 0 10px 25px -5px rgba(230, 57, 70, 0.2);
+        }
+        .logo-box {
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--color-border);
+            border-radius: 0.5rem;
+            padding: 0 1rem;
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+        .logo-text {
+            font-weight: 700;
+            color: #E8E8E8;
         }
     </style>
 </head>
@@ -69,21 +83,21 @@
             <p class="max-w-2xl mx-auto text-gray-400 mb-12">저희는 세 가지 핵심 요소의 결합을 통해 리더의 성공적인 AI 역량 전환을 이끌어냅니다.</p>
             <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
                 <div class="bg-[var(--color-card)] p-8 rounded-xl border border-[var(--color-border)] card-hover">
-                    <div class="w-16 h-16 bg-orange-900/50 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div class="w-16 h-16 bg-[rgba(230,57,70,0.1)] rounded-full flex items-center justify-center mx-auto mb-4">
                         <i data-lucide="brain-circuit" class="w-8 h-8 text-[var(--color-primary)] section-icon"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-2 text-white">Artificial Intelligence</h3>
                     <p class="text-gray-400">최신 AI 기술 활용 역량</p>
                 </div>
                 <div class="bg-[var(--color-card)] p-8 rounded-xl border border-[var(--color-border)] card-hover">
-                    <div class="w-16 h-16 bg-orange-900/50 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div class="w-16 h-16 bg-[rgba(230,57,70,0.1)] rounded-full flex items-center justify-center mx-auto mb-4">
                         <i data-lucide="mouse-pointer-click" class="w-8 h-8 text-[var(--color-primary)] section-icon"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-2 text-white">Active Learning</h3>
                     <p class="text-gray-400">자기주도적 체험형 학습</p>
                 </div>
                 <div class="bg-[var(--color-card)] p-8 rounded-xl border border-[var(--color-border)] card-hover">
-                    <div class="w-16 h-16 bg-orange-900/50 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div class="w-16 h-16 bg-[rgba(230,57,70,0.1)] rounded-full flex items-center justify-center mx-auto mb-4">
                         <i data-lucide="user-check" class="w-8 h-8 text-[var(--color-primary)] section-icon"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-2 text-white">Agent (Domain Expert)</h3>
@@ -100,7 +114,7 @@
                 <div class="accordion-item bg-[var(--color-card)] rounded-lg border border-[var(--color-border)]">
                     <button class="accordion-header w-full text-left p-6 flex justify-between items-center">
                         <div>
-                            <p class="text-sm font-bold text-[var(--color-primary)]">Phase 1: Foundation</p>
+                            <p class="text-sm font-bold text-[var(--color-secondary)]">Phase 1: Foundation</p>
                             <h4 class="text-xl font-bold mt-1 text-white">공통 역량 강화 (Day 1-5)</h4>
                         </div>
                         <i data-lucide="chevron-down" class="w-6 h-6 transform transition-transform"></i>
@@ -122,7 +136,7 @@
                 <div class="accordion-item bg-[var(--color-card)] rounded-lg border border-[var(--color-border)]">
                     <button class="accordion-header w-full text-left p-6 flex justify-between items-center">
                         <div>
-                            <p class="text-sm font-bold text-[var(--color-primary)]">Phase 2: Deep Dive</p>
+                            <p class="text-sm font-bold text-[var(--color-secondary)]">Phase 2: Deep Dive</p>
                             <h4 class="text-xl font-bold mt-1 text-white">주제별 심화 실습 (Day 6-7)</h4>
                         </div>
                         <i data-lucide="chevron-down" class="w-6 h-6 transform transition-transform"></i>
@@ -141,7 +155,7 @@
                 <div class="accordion-item bg-[var(--color-card)] rounded-lg border border-[var(--color-border)]">
                     <button class="accordion-header w-full text-left p-6 flex justify-between items-center">
                         <div>
-                            <p class="text-sm font-bold text-[var(--color-primary)]">Phase 3: Creation</p>
+                            <p class="text-sm font-bold text-[var(--color-secondary)]">Phase 3: Creation</p>
                             <h4 class="text-xl font-bold mt-1 text-white">미니 해커톤 & 아이디어톤 (Day 8-9)</h4>
                         </div>
                         <i data-lucide="chevron-down" class="w-6 h-6 transform transition-transform"></i>
@@ -161,22 +175,30 @@
         <!-- Section 3: Core Tech Stack -->
         <section class="my-24 py-16">
             <h2 class="text-3xl font-bold text-center mb-12">Core Tech & Platform</h2>
-            <div class="flex flex-wrap justify-center items-center gap-x-12 gap-y-8 max-w-4xl mx-auto">
-                 <div class="text-center p-4 bg-white/5 rounded-lg">
-                    <img src="https://via.placeholder.com/120x40/FFFFFF/1F1F1F?text=Agentspace" alt="Agentspace 로고" class="h-10 mx-auto">
-                    <p class="mt-2 text-sm font-semibold text-gray-300">Main Platform</p>
+            <div class="flex flex-wrap justify-center items-center gap-x-8 gap-y-8 max-w-4xl mx-auto">
+                 <div class="text-center">
+                    <div class="logo-box">
+                       <p class="logo-text text-lg">Agentspace</p>
+                    </div>
+                    <p class="mt-2 text-sm font-semibold text-gray-400">Main Platform</p>
                 </div>
-                <div class="text-center p-4 bg-white/5 rounded-lg">
-                     <img src="https://via.placeholder.com/100x40/FFFFFF/1F1F1F?text=EXAONE" alt="EXAONE 로고" class="h-10 mx-auto">
-                    <p class="mt-2 text-sm font-semibold text-gray-300">LG's Core LLM</p>
+                <div class="text-center">
+                    <div class="logo-box">
+                       <p class="logo-text text-lg">EXAONE</p>
+                    </div>
+                    <p class="mt-2 text-sm font-semibold text-gray-400">LG's Core LLM</p>
                 </div>
-                <div class="text-center p-4 bg-white/5 rounded-lg">
-                     <img src="https://via.placeholder.com/100x40/FFFFFF/1F1F1F?text=Gemini" alt="Gemini 로고" class="h-10 mx-auto">
-                    <p class="mt-2 text-sm font-semibold text-gray-300">Google's LLM</p>
+                <div class="text-center">
+                     <div class="logo-box">
+                       <p class="logo-text text-lg">Gemini</p>
+                    </div>
+                    <p class="mt-2 text-sm font-semibold text-gray-400">Google's LLM</p>
                 </div>
-                <div class="text-center p-4 bg-white/5 rounded-lg">
-                     <img src="https://via.placeholder.com/180x40/FFFFFF/1F1F1F?text=Vertex+AI" alt="Vertex AI 로고" class="h-10 mx-auto">
-                    <p class="mt-2 text-sm font-semibold text-gray-300">Cloud Infrastructure</p>
+                <div class="text-center">
+                    <div class="logo-box px-6">
+                       <p class="logo-text text-lg">Vertex AI</p>
+                    </div>
+                    <p class="mt-2 text-sm font-semibold text-gray-400">Cloud Infrastructure</p>
                 </div>
             </div>
              <p class="text-center mt-10 text-gray-400 max-w-3xl mx-auto">
@@ -222,7 +244,6 @@
                     const content = header.nextElementSibling;
                     const icon = header.querySelector('i');
                     
-                    // Close other accordions
                     document.querySelectorAll('.accordion-content.open').forEach(openContent => {
                         if (openContent !== content) {
                             openContent.classList.remove('open');
@@ -230,7 +251,6 @@
                         }
                     });
 
-                    // Toggle current accordion
                     content.classList.toggle('open');
                     icon.classList.toggle('rotate-180');
                 });
