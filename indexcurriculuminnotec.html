@@ -13,8 +13,8 @@
         :root {
             --color-bg: #262626; /* Dark Charcoal */
             --color-text: #E8E8E8;
-            --color-primary: #E63946; /* Reddish Pink */
-            --color-secondary: #F4A261; /* Sandy Orange */
+            --color-primary: #E63946; /* Reddish Pink from PPT */
+            --color-secondary: #F4A261; /* Sandy Orange from PPT */
             --color-card: #333333;
             --color-border: #4D4D4D;
         }
@@ -37,7 +37,7 @@
             transition: max-height 0.5s ease-in-out;
         }
         .accordion-content.open {
-            max-height: 500px; /* Adjust as needed */
+            max-height: 500px;
         }
         .card-hover {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -55,6 +55,10 @@
             border-radius: 0.5rem;
             padding: 0 1rem;
             background-color: rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+        }
+        .logo-box:hover {
+            border-color: var(--color-secondary);
         }
         .logo-text {
             font-weight: 700;
@@ -236,6 +240,7 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            // This ensures all scripts run after the page content is fully loaded.
             lucide.createIcons();
 
             const accordionHeaders = document.querySelectorAll('.accordion-header');
@@ -244,15 +249,22 @@
                     const content = header.nextElementSibling;
                     const icon = header.querySelector('i');
                     
-                    document.querySelectorAll('.accordion-content.open').forEach(openContent => {
-                        if (openContent !== content) {
+                    // Close other open accordions
+                    if (!content.classList.contains('open')) {
+                        document.querySelectorAll('.accordion-content.open').forEach(openContent => {
                             openContent.classList.remove('open');
-                            openContent.previousElementSibling.querySelector('i').classList.remove('rotate-180');
-                        }
-                    });
+                            const openIcon = openContent.previousElementSibling.querySelector('i');
+                            if (openIcon) {
+                                openIcon.classList.remove('rotate-180');
+                            }
+                        });
+                    }
 
+                    // Toggle current accordion
                     content.classList.toggle('open');
-                    icon.classList.toggle('rotate-180');
+                    if (icon) {
+                        icon.classList.toggle('rotate-180');
+                    }
                 });
             });
         });
