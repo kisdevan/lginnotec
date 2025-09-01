@@ -560,32 +560,134 @@
             </div>
         </div>
 
-              <!-- Expected Performance Section -->
-        <div class="results">
-            <h2>기대 성과</h2>
-            <div class="result-cards">
-                <div class="result-card">
-                    <h3>정량적 성과</h3>
-                    <ul>
-                        <li>인당 MVP 1개 이상 제작</li>
-                        <li>Agent 적용 자신감 90% 향상</li>
-                        <li>팀 내 Agent 활용도 3배 증가</li>
-                        <li>실무 적용률 65% 이상 달성</li>
-                        <li>프로세스 자동화 5개 이상 구현</li>
-                    </ul>
-                </div>
-                <div class="result-card">
-                    <h3>전략적 성과</h3>
-                    <ul>
-                        <li>AI Orchestrator 15명 양성</li>
-                        <li>현업 주도 혁신 문화 조성</li>
-                        <li>Agentspace 활용 사례 발굴</li>
-                        <li>AI Native 전환 가속화</li>
-                        <li>조직 내 AI 거버넌스 체계 수립</li>
-                    </ul>
-                </div>
+      <!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기대 성과 인포그래픽</title>
+    <style>
+        /* 폰트 및 기본 스타일 */
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
+        
+        body {
+            font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #f8f9fa; /* 배경색은 실제 사용 환경에 맞게 조정하세요. */
+            color: #333;
+            line-height: 1.6;
+            padding: 20px; /* 스니펫 확인을 위한 여백 */
+        }
+
+        /* 기대 성과 섹션 스타일 */
+        .results {
+            background: #f8f9fa;
+            padding: 80px 60px;
+            margin: 40px;
+            border-radius: 30px;
+        }
+        
+        .results h2 {
+            font-size: 2.8em;
+            color: #333;
+            text-align: center;
+            margin-bottom: 60px;
+            font-weight: 700;
+        }
+        
+        .result-cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .result-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            position: relative;
+            border-left: 5px solid #FF6B81;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+        }
+        
+        .result-card h3 {
+            font-size: 1.8em;
+            color: #333;
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+        
+        .result-card ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .result-card li {
+            padding: 12px 0;
+            font-size: 1.1em;
+            color: #555;
+            display: flex;
+            align-items: center;
+        }
+        
+        .result-card li:before {
+            content: '✓';
+            color: #FF6B81;
+            font-weight: bold;
+            margin-right: 15px;
+            font-size: 1.2em;
+        }
+
+        /* 반응형 스타일 */
+        @media (max-width: 1024px) {
+            .result-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .results {
+                padding: 40px 30px;
+                margin: 20px;
+            }
+            .results h2 { 
+                font-size: 2.2em; 
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Expected Performance Section -->
+    <div class="results">
+        <h2>기대 성과</h2>
+        <div class="result-cards">
+            <div class="result-card">
+                <h3>정량적 성과</h3>
+                <ul>
+                    <li>인당 MVP 1개 이상 제작</li>
+                    <li>Agent 적용 자신감 90% 향상</li>
+                    <li>팀 내 Agent 활용도 3배 증가</li>
+                    <li>실무 적용률 65% 이상 달성</li>
+                    <li>프로세스 자동화 5개 이상 구현</li>
+                </ul>
+            </div>
+            <div class="result-card">
+                <h3>전략적 성과</h3>
+                <ul>
+                    <li>AI Orchestrator 15명 양성</li>
+                    <li>현업 주도 혁신 문화 조성</li>
+                    <li>Agentspace 활용 사례 발굴</li>
+                    <li>AI Native 전환 가속화</li>
+                    <li>조직 내 AI 거버넌스 체계 수립</li>
+                </ul>
             </div>
         </div>
+    </div>
+
+</body>
+</html>
 
         <!-- CTA Section -->
         <div class="cta">
@@ -612,5 +714,6 @@
     </script>
 </body>
 </html>
+
 
 
